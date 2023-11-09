@@ -1,0 +1,272 @@
+/*
+@font-face{
+    font-family:"Inter";
+    src:url(fonts/inter-semibold.ttf), url(fonts/inter-light.ttf);
+}
+*/
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+header .logo{
+    width:20%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+}
+
+body{
+   
+    font-family: 'Inter', sans-serif;;
+    margin: 0;
+background: black;
+
+}
+*{
+	box-sizing: border-box;
+	
+}
+
+p{color: white; font-weight: 300 !important;}
+
+h1, h2,h3{
+    color: white;
+}
+
+
+.container{
+    padding: 20px;
+    position: fixed;
+}
+
+.home-page{
+    background-image: url(images/Synthetics_Background.jpeg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    
+}
+.text-title{
+    position: fixed;
+    top: 50%;
+/*    left: 0;*/
+    transform: translate(0, -50%);
+    line-height: 0.8;
+    
+}
+
+.title{
+font-weight: 600;
+font-size: 150px;}
+.title-para{
+    font-weight: 300 !important;
+    font-size: 35px;
+}
+footer{
+    display: flex;
+    bottom: 0;
+position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.next{
+    width: 10%;
+    transform: rotate(180deg);
+}
+
+.prev{
+    width: 10%;
+    
+}
+.pageSections{
+    width: 100%;
+flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    transition: 0.5s;
+}
+.pageTitle{
+    font-weight: 500;
+    font-size: 70px;
+ width: 100%;
+    padding: 20px;
+
+}
+
+.ContentText{
+    font-size: 32px;
+   text-align: right;
+    width: 100%;
+
+}
+
+
+.hide{
+    display: none;
+}
+.home{width:7%;}
+a{
+    text-decoration: none;
+    color: #7000FF;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+   background: #8000FF;
+    padding: 20px;
+    list-style: none;
+border-radius: 5px;
+}
+
+.cards{
+/*
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+*/
+/*    display: flex;*/
+    justify-content: flex-end;
+    justify-items: end;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    flex-direction: row;
+    width: 50%;
+    padding: 20px;
+    gap:10px;
+    cursor: pointer;
+    display: none;
+
+
+
+}
+
+img.cardImg {
+    width: 100%;
+    height: 365px;
+    position: relative;
+
+    
+}
+
+h3{
+    font-weight: bold;
+}
+
+.cards-hover{
+    background-color: #7000FF;
+/*        width: 100%;*/
+    padding: 2px 16px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: .5s ease;
+    text-align: center;
+    bottom: 10%;
+    z-index: -1;
+}
+
+.card-title{
+      background-color: #7000FF;
+        width: 100%;
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.card-title:hover{
+    display: none;
+}
+
+ .cards-content:hover .cards-hover{
+     height: 50%;
+     bottom:10px;;
+    padding: 20px;
+    width: 100%;
+     z-index: 2;
+} 
+
+
+
+
+.cards-content{
+    width: 50%;
+    position: relative;
+}
+
+/*code responsiveness here*/
+
+@media only screen and (min-width: 200px) and (max-width: 599px){
+    
+    .pageSections{
+
+       flex-direction: column;
+        
+    }
+    .ContentText{
+        text-align: left !important;
+        width: 100% !important;
+        font-size: 18px !important;
+    margin-top: -10% !important;;
+    }
+    
+    .cards{
+       
+/*        position: relative;*/
+        width: 100%;
+        top: 70% !important;
+        transform: translate(-50%, -50%);
+        left: 50% !important;
+        padding-top: 50px;
+        
+        
+    }
+    
+    .title{
+        font-size: 80px;
+    }
+    .title-para{
+  
+    font-size: 25px;
+}
+    
+    .pageTitle{
+        font-size: 50px;
+    }
+    
+    li{
+            width: 100%;
+        text-align: center;
+      
+    }
+    img.cardImg{
+        height: 200px !important;
+    }
+     .cards-content:hover .cards-hover{
+     height: 90%;
+
+  
+} 
+    
+}
+
