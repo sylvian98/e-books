@@ -19,7 +19,7 @@ header .logo{
 
 body{
    
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
     margin: 0;
 background: black;
 
@@ -214,11 +214,22 @@ h3{
     position: relative;
 }
 
+.social{
+    width: 100%;
+}
+
+.social-media-cards{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: fixed;
+    top: 55%;
+    display: none;
+}
+
 /*code responsiveness here*/
 
 @media only screen and (min-width: 200px) and (max-width: 599px){
-	header .logo{
-		width:50%}
     
     .pageSections{
 
@@ -228,7 +239,7 @@ h3{
     .ContentText{
         text-align: left !important;
         width: 100% !important;
-        font-size: 18px !important;
+        font-size: 16px !important;
     margin-top: -10% !important;
     }
     
@@ -250,11 +261,11 @@ h3{
     .title-para{
   
     font-size: 25px;
-	    line-height: 1.2;
+        line-height: 1.2;
 }
     
     .pageTitle{
-        font-size: 50px;
+        font-size: 40px;
     }
     
     li{
@@ -263,15 +274,19 @@ h3{
       
     }
     img.cardImg{
-        height: 200px !important;
+        height: 130px !important;
     }
      .cards-content:hover .cards-hover{
-     height: 90%;
+     height: 120%;
 
   
 } 
+    header .logo{
+        width: 50%;
+    }
     
 }
+
 @media only screen and (min-width: 600px) and (max-width: 1439px){
     
     .pageTitle{
@@ -280,4 +295,83 @@ h3{
 
 
 }
+    
+}
+
+@media only screen and (max-width: 280px){
+    
+    
+    .title{
+        font-size:  50px;}
+    
+    
+        .ContentText{
+        font-size: 14px !important;
+   
+    }
+    
+    .title-para{
+
+    font-size: 21px;
+}
+    
+       .pageTitle{
+
+    font-size: 32px !important;
+
+
+}
+    .cards-para{
+        font-size: 12px;
+    }
+    
+    img.cardImg{
+        height: 118px !important;
+    }
+    
+       .cards-content:hover .cards-hover{
+     height: 130%;
+
+  
+} 
+    h3{
+        font-size: 16px !important;
+        width: 100%;
+    }
+    
+    
+    }
+
+@media only screen and  (max-width: 1024px){
+.cards{
+       
+/*        position: relative;*/
+        width: 100%;
+        top: 70% !important;
+        transform: translate(-50%, -50%);
+        left: 50% !important;
+        padding-top: 50px;
+        
+        
+    }
+    
+      .ContentText{
+        width: 100% !important;
+          position: relative;
+/*          top: 90% !important;*/
+   
+    }
+    
+    img.cardImg{
+        height: 200px;
+    }
+        .cards-content:hover .cards-hover{
+     height: 100%;
+
+  
+}
+    .pageSections{
+        top: 35% !important;
+    }
+    
 }
