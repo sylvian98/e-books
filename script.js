@@ -28,6 +28,7 @@ const testPages =[
 
 const flex = document.querySelector(".pageSections")
 const cards = document.querySelector(".cards")
+const social= document.querySelector(".social-media-cards")
 var br = document.createElement("br")
 
 const nextTag = document.querySelector("footer img.prev");
@@ -87,25 +88,22 @@ const showSections = function(){
     
    
 //      Notes 
-   if(sectionNumber==[2]){
-       
-       console.log("hello")
-   }   
-    else{ console.log("goodbye")
-        }  
+//   if(sectionNumber==[4]){
+//       
+//       console.log("hello world")
+//   }   
+//    else{ console.log("goodbye")
+//        }  
 
     if(sectionNumber==[3]){
         function myFunction(x) {
   if (x.matches) { // If media query matches
    flex.style.top="40%"
    
-
-  } else if (sectionNumber > [4]){
-   flex.style.top="50%"
-
   }
-            else{
-                flex.style.top=""
+else{
+    flex.style.top="50% !important"
+       
             }
 }
 
@@ -142,6 +140,18 @@ x.addListener(myFunction) // Attach listener function on state changes
 //            contentPara.style.paddingLeft=""
 //       contentPara.style.paddingRight=""
     }
+    
+    
+    
+    if (sectionNumber==[0]){
+        
+        social.style.display="grid"
+    }
+    else{
+        social.style.display=""
+    }
+    
+    
 }
 
 
@@ -172,5 +182,6 @@ nextTag.addEventListener("click", function(){
 prevTag.addEventListener("click", function(){
     prevbtn()
 })
+
 
 
